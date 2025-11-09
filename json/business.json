@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Grand Mirage Hotel",
+    "industry": "Hotel & Tourism",
+    "description": "A five-star oceanfront resort offering luxury suites and spa services.",
+    "employees": 85,
+    "location": "Bali, Indonesia",
+    "locallink": "https://goo.gl/maps/xyz123"
+  },
+  {
+    "name": "Mama Rosa Trattoria",
+    "industry": "Food & Restaurant",
+    "description": "Cozy family-owned Italian restaurant famous for homemade pasta.",
+    "employees": 14,
+    "location": "Florence, Italy",
+    "locallink": "https://goo.gl/maps/xyz124"
+  },
+  {
+    "name": "TechNova Solutions",
+    "industry": "Services Provider",
+    "description": "Cloud infrastructure and web hosting company.",
+    "employees": 52,
+    "location": "Berlin, Germany",
+    "locallink": "https://goo.gl/maps/xyz125"
+  },
+  {
+    "name": "The Green Thumb",
+    "industry": "Retail & Services",
+    "description": "Urban plant nursery and landscape design studio.",
+    "employees": 9,
+    "location": "Portland, Oregon",
+    "locallink": "https://goo.gl/maps/xyz126"
+  },
+  {
+    "name": "Starlight Cleaning Co.",
+    "industry": "Cleaning & Maintenance",
+    "description": "Full-service residential and commercial cleaning agency.",
+    "employees": 22,
+    "location": "Toronto, Canada",
+    "locallink": "https://goo.gl/maps/xyz127"
+  },
+  {
+    "name": "Booba Cell",
+    "industry": "Services Provider",
+    "description": "Quick and handy, Booba offers a wide range of telecommunication tools to best help your business grow",
+    "employees": 15,
+    "location": "Florence, Italy",
+    "locallink": "https://goo.gl/maps/xyz128"
+  },
+  {
+    "name": "Go Shari Go",
+    "industry": "Property Maintenance",
+    "description": "Dedicated to customer satisfaction. We specialize in anything from landscaping to pool cleaning and overall property upkeep.",
+    "employees": 12,
+    "location": "Toronto, Canada",
+    "locallink": "https://goo.gl/maps/xyz129"
+  }
+]
