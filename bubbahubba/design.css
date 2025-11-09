@@ -1,0 +1,286 @@
+/* Centralized reusable styles */
+h1, h2, h3, p, span {
+	text-align: center;
+	margin: 0.5em 0;
+	font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Reset page margins so full-bleed elements (like the nav) reach the viewport edges */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Page background: animated blue-purple gradient with a subtle parallax feel */
+body {
+	/* layered gradient for depth */
+	background: linear-gradient(120deg,#ffffff 0%,#687f60a9 50%,#ffffff 100%);
+	background-size: 300% 300%;
+	background-attachment: fixed; /* gives a parallax effect when scrolling */
+	animation: gradientShift 14s ease infinite;
+}
+
+@keyframes gradientShift {
+	0% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
+}
+
+h1 {
+	font-size: 2.5em;
+	font-weight: bold;
+	color: #2d3748;
+}
+
+h2 {
+	font-size: 2em;
+	font-weight: bold;
+	color: #3b4252;
+}
+
+h3 {
+	font-size: 1.5em;
+	font-weight: 600;
+	color: #4c566a;
+}
+
+span {
+	font-size: 1em;
+	color: #5e81ac;
+}
+
+span strong {
+	font-weight: bold;
+	color: #bf616a;
+}
+
+p {
+	font-size: 1.1em;
+	color: #434c5e;
+}
+
+nav h1 {
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #2e3440;
+	text-align: left;
+	margin: 0;
+}
+
+/* Ensure the nav title link inherits styles and has no underline */
+nav h1 a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+
+nav {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	background: #eceff4;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5em 2em;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+	z-index: 100;
+
+  /* make nav layout stable when using padding so background spans edge-to-edge */
+  box-sizing: border-box;
+}
+
+nav .nav-links {
+	display: flex;
+	gap: 2em;
+}
+
+nav .nav-links a {
+	font-size: 1.1em;
+	font-weight: bold;
+	color: #5e81ac;
+	text-decoration: none;
+	transition: color 0.2s;
+}
+nav .nav-links a:hover {
+	color: #bf616a;
+}
+
+/* Small styling for the stats row on the landing page */
+.stats-row {
+	padding: 0.75em 1.25em; /* modest padding as requested */
+	border-radius: 6px;
+}
+.stats-row > div {
+	min-width: 140px; /* keep each stat readable */
+}
+
+/* center the stats row and make it a flex container */
+.stats-row {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	align-items: center;
+	padding: 0.75em 1.25em;
+	border-radius: 6px;
+}
+
+/* horizontal scroll helper */
+.horizontal-scroll {
+	display: flex;
+	overflow-x: auto;
+	gap: 1rem;
+	padding-bottom: 1rem;
+	-webkit-overflow-scrolling: touch;
+}
+
+/* Location filters: horizontal scrollable button list */
+.location-filters {
+	display: flex;
+	gap: 0.5rem;
+	overflow-x: auto;
+	padding: 0.5rem 0.25rem;
+	-webkit-overflow-scrolling: touch;
+}
+.location-filters .loc-btn {
+	background: #f7fafc;
+	border: 1px solid #d8dee9;
+	padding: 0.35rem 0.6rem;
+	border-radius: 999px;
+	cursor: pointer;
+	white-space: nowrap;
+	font-weight: 600;
+}
+.location-filters .loc-btn:hover { background: #eef2f6; }
+.location-filters .loc-btn.active {
+	background: #5e81ac;
+	color: #fff;
+	border-color: #5e81ac;
+}
+
+/* Filter controls on jobs page */
+.filter-toggle-row {
+	display: flex;
+	gap: 0.5rem;
+	margin: 0.5rem 0 0.75rem 0;
+	justify-content: center; /* keep search/filter buttons centered */
+	flex-wrap: wrap;
+}
+.filter-toggle {
+	background: #fff;
+	border: 1px solid #d8dee9;
+	padding: 0.4rem 0.8rem;
+	border-radius: 6px;
+	cursor: pointer;
+	font-weight: 600;
+}
+.filter-toggle.active { background:#5e81ac; color:#fff; border-color:#5e81ac; }
+.filter-panel { margin: 0.5rem 0 1rem 0; }
+.filter-panel label { display:block; margin-bottom:0.5rem; font-weight:600; }
+.filter-panel input[type='range'] { width:100%; }
+
+/* No results message */
+.no-results {
+	text-align: center;
+	color: #667085;
+	padding: 1.25em;
+	border: 1px dashed #d8dee9;
+	border-radius: 8px;
+	background: #fcfdff;
+}
+.no-results p { margin: 0.25em 0; }
+
+/* Reusable layout helpers previously inline */
+.container {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+.centered-container {
+	max-width: 700px;
+	margin: 0 auto;
+	/* center children vertically and horizontally */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 0 1rem;
+}
+.section-gap {
+	margin: 1.5em 0;
+}
+/* Utility to hide panels via class instead of inline styles */
+.hidden {
+  display: none !important;
+}
+.search-input {
+	width: 100%;
+	max-width: 640px;
+	padding: 0.6em 0.75em;
+	font-size: 1em;
+	border-radius: 6px;
+	border: 1px solid rgba(0,0,0,0.08);
+	box-shadow: 0 1px 4px rgba(16,24,40,0.02) inset;
+}
+.button-row {
+	margin-top: 1em;
+	display: flex;
+	gap: 0.5rem;
+	justify-content: center;
+}
+/* Make the small toggle buttons match the pill styling used by location filters */
+.toggle-btn {
+	background: #f7fafc;
+	border: 1px solid #d8dee9;
+	padding: 0.35rem 0.6rem;
+	border-radius: 999px;
+	cursor: pointer;
+	white-space: nowrap;
+	font-weight: 600;
+}
+.toggle-btn:hover { background: #eef2f6; }
+.toggle-btn.active { background: #5e81ac; color: #fff; border-color: #5e81ac; }
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1.5em;
+	margin-bottom: 2em;
+}
+.thumb {
+	border: 1px solid #d8dee9;
+	padding: 1em;
+	width: 200px;
+	cursor: pointer;
+	background: #fff;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+	text-align: left;
+	border-radius: 12px; /* softer corners */
+	transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.thumb:hover { transform: translateY(-4px); box-shadow: 0 6px 18px rgba(0,0,0,0.08); }
+.business-thumb strong, .job-thumb strong { display:block; margin-bottom:0.25em; }
+.thumb span { display:block; color: #5e81ac; }
+.thumb .muted { color: #667085; font-size:0.95em; }
+
+/* Ensure strong/muted values inside thumbs are left aligned and readable */
+.thumb strong, .thumb .muted, .thumb span { display: block; text-align: left; }
+
+/* main content wrapper used in business.html and jobs.html */
+.main-content {
+	max-width: 700px;
+	margin: 2em auto 0 auto;
+	padding: 1em;
+}
+
+/* Adjust text color for better readability on gradient background */
+body, .centered-container, .stats-row, .filter-toggle-row, .no-results {
+  color: #ffffff; /* White text for better contrast */
+}
+
+/* Retain current font colors for thumbnails with white backgrounds */
+.thumb {
+  color: initial; /* Reset to default color for thumbnails */
+}
